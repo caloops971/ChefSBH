@@ -1,0 +1,26 @@
+{
+  "name": "chef-sbh",
+  "version": "1.0.0",
+  "description": "Private Chef Services in St Barth",
+  "engines": {
+    "node": "18.x",
+    "npm": "9.x"
+  },
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --no-source-maps --detailed-report 0",
+    "heroku-postbuild": "parcel build src/index.html --no-source-maps"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.2",
+    "aos": "^2.3.4",
+    "i18next": "^23.10.0",
+    "i18next-browser-languagedetector": "^7.2.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.11.0",
+    "parcel": "^2.11.0",
+    "sass": "^1.71.0"
+  }
+}

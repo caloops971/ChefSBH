@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Chef St Barth | Luxury Dining Experience</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/main.scss">
+    <style>
+        .event-card, .partner-card {
+            text-align: center;
+            padding: 2rem;
+            height: 100%;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .event-card i, .partner-card i {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #d4af37;
+            display: block;
+        }
+
+        .event-card:hover, .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">ChefSBH</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#services" data-i18n="services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menus" data-i18n="menus">Menus</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#specialties" data-i18n="specialties">Specialties</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="contact">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-globe"></i> Language
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#" data-lang="en">
+                                    <img src="https://flagcdn.com/w20/gb.png" alt="English" width="20" height="15" class="me-2">
+                                    English
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" data-lang="fr">
+                                    <img src="https://flagcdn.com/w20/fr.png" alt="Français" width="20" height="15" class="me-2">
+                                    Français
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" data-lang="it">
+                                    <img src="https://flagcdn.com/w20/it.png" alt="Italiano" width="20" height="15" class="me-2">
+                                    Italiano
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" data-lang="es">
+                                    <img src="https://flagcdn.com/w20/es.png" alt="Español" width="20" height="15" class="me-2">
+                                    Español
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" data-lang="de">
+                                    <img src="https://flagcdn.com/w20/de.png" alt="Deutsch" width="20" height="15" class="me-2">
+                                    Deutsch
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" data-lang="ru">
+                                    <img src="https://flagcdn.com/w20/ru.png" alt="Русский" width="20" height="15" class="me-2">
+                                    Русский
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1 data-i18n="heroTitle">Exclusive Private Chef Experience</h1>
+            <p data-i18n="heroSubtitle">Bringing luxury dining to your villa in St Barth</p>
+            <a href="#contact" class="btn btn-primary btn-lg" data-i18n="bookNow">Book Your Experience</a>
+        </div>
+    </header>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" data-i18n="servicesTitle">Nos Services</h2>
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <i class="bi bi-house-heart"></i>
+                        <h3 data-i18n="villaExperience">Service en Villa</h3>
+                        <p data-i18n="villaExperienceDesc">Service de chef privé complet dans votre villa, du petit-déjeuner au dîner</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <i class="bi bi-water"></i>
+                        <h3 data-i18n="yachtService">Service Yacht</h3>
+                        <p data-i18n="yachtServiceDesc">Service de chef exclusif à bord de votre yacht, incluant l'approvisionnement</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <i class="bi bi-cart-check"></i>
+                        <h3 data-i18n="provisioning">Approvisionnement</h3>
+                        <p data-i18n="provisioningDesc">Approvisionnement de villas et yachts en produits locaux premium</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card">
+                        <i class="bi bi-cup-straw"></i>
+                        <h3 data-i18n="eventsService">Événements & Cocktails</h3>
+                        <p data-i18n="eventsServiceDesc">Cocktails de luxe et service traiteur pour événements spéciaux</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-card">
+                        <i class="bi bi-book"></i>
+                        <h3 data-i18n="cookingClasses">Cours de Cuisine</h3>
+                        <p data-i18n="cookingClassesDesc">Cours privés de cuisine caribéenne et française</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-card">
+                        <i class="bi bi-basket"></i>
+                        <h3 data-i18n="beachPicnics">Pique-niques</h3>
+                        <p data-i18n="beachPicnicsDesc">Expériences pique-nique de luxe à Colombier ou Shell Beach</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?q=80&w=1974" alt="Private Chef" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h2 class="section-title" data-i18n="aboutTitle">About Your Chef</h2>
+                    <p class="lead" data-i18n="aboutLead">Bringing years of culinary expertise from renowned restaurants across the globe to your private villa in St Barth.</p>
+                    <p data-i18n="aboutText">Our passion for exceptional cuisine combined with personalized service ensures an unforgettable dining experience in the comfort of your accommodation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menus" class="menus">
+        <div class="container">
+            <h2 class="section-title" data-i18n="menusTitle">Our Menus</h2>
+            <div class="menu-tabs">
+                <ul class="nav nav-pills justify-content-center mb-5" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="pill" href="#breakfast" data-i18n="breakfast">Breakfast</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="pill" href="#lunch" data-i18n="lunch">Lunch</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="pill" href="#dinner" data-i18n="dinner">Dinner</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="breakfast" class="tab-pane fade show active">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="menu-item" data-aos="fade-up">
+                                    <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?q=80&w=2070" alt="Gourmet Breakfast" class="img-fluid">
+                                    <h3 data-i18n="continentalTitle">Continental Breakfast</h3>
+                                    <p data-i18n="continentalDesc">Fresh pastries, tropical fruits, yogurt parfait</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                                    <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=2080" alt="Healthy Breakfast" class="img-fluid">
+                                    <h3 data-i18n="healthyTitle">Healthy Start</h3>
+                                    <p data-i18n="healthyDesc">Açai bowl, avocado toast, fresh smoothies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="lunch" class="tab-pane fade">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="menu-item" data-aos="fade-up">
+                                    <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?q=80&w=2069" alt="Mediterranean Feast" class="img-fluid">
+                                    <h3 data-i18n="mediterraneanTitle">Mediterranean Feast</h3>
+                                    <p data-i18n="mediterraneanDesc">Fresh caught fish, grilled vegetables, quinoa salad</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                                    <img src="https://images.unsplash.com/photo-1523986371872-9d3ba2e2a389?q=80&w=2069" alt="Gourmet To-Go" class="img-fluid">
+                                    <h3 data-i18n="gourmetToGoTitle">Gourmet To-Go</h3>
+                                    <p data-i18n="gourmetToGoDesc">Luxury beach picnic boxes, perfect for Shell Beach or Colombier</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="menu-item" data-aos="fade-up">
+                                    <img src="https://images.unsplash.com/photo-1579684947550-22e945225d9a?q=80&w=2074" alt="Caribbean Seafood" class="img-fluid">
+                                    <h3 data-i18n="caribbeanSeafoodTitle">Caribbean Seafood</h3>
+                                    <p data-i18n="caribbeanSeafoodDesc">Local lobster, ceviche, fresh island flavors</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2070" alt="Light & Fresh" class="img-fluid">
+                                    <h3 data-i18n="lightFreshTitle">Light & Fresh</h3>
+                                    <p data-i18n="lightFreshDesc">Colorful salads, grilled proteins, fresh pressed juices</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="dinner" class="tab-pane fade">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="menu-item" data-aos="fade-up">
+                                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070" alt="Signature Experience" class="img-fluid">
+                                    <h3 data-i18n="signatureTitle">Signature Experience</h3>
+                                    <p data-i18n="signatureDesc">Seven-course tasting menu with wine pairing</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                                    <img src="https://images.unsplash.com/photo-1560717845-968823efbee1?q=80&w=2070" alt="Ocean to Table" class="img-fluid">
+                                    <h3 data-i18n="oceanTableTitle">Ocean to Table</h3>
+                                    <p data-i18n="oceanTableDesc">Fresh caught fish and seafood prepared to your preference</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="menu-item" data-aos="fade-up">
+                                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2069" alt="Caribbean Luxury" class="img-fluid">
+                                    <h3 data-i18n="caribbeanLuxuryTitle">Caribbean Luxury</h3>
+                                    <p data-i18n="caribbeanLuxuryDesc">Grilled spiny lobster, truffle risotto, champagne sauce</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                                    <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?q=80&w=2074" alt="Sunset BBQ" class="img-fluid">
+                                    <h3 data-i18n="sunsetBBQTitle">Sunset BBQ</h3>
+                                    <p data-i18n="sunsetBBQDesc">Grilled specialties with stunning ocean views</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="specialties" class="specialties">
+        <div class="container">
+            <h2 class="section-title text-center" data-i18n="specialtiesTitle">Culinary Specialties</h2>
+            <div class="row mt-5">
+                <div class="col-md-3" data-aos="fade-up">
+                    <div class="specialty-card">
+                        <i class="bi bi-flower1"></i>
+                        <h3 data-i18n="detoxTitle">Detox & Wellness</h3>
+                        <p data-i18n="detoxDesc">Customized nutritional programs, detox juices, wellness menus</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="specialty-card">
+                        <i class="bi bi-cup-hot"></i>
+                        <h3 data-i18n="vipBreakfastTitle">VIP Breakfast</h3>
+                        <p data-i18n="vipBreakfastDesc">Luxury breakfast service on your terrace with sea view</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="specialty-card">
+                        <i class="bi bi-fire"></i>
+                        <h3 data-i18n="bbqTitle">BBQ & Plancha</h3>
+                        <p data-i18n="bbqDesc">Luxury seaside grilling: lobster, wagyu, premium fish</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="specialty-card">
+                        <i class="bi bi-balloon"></i>
+                        <h3 data-i18n="celebrationsTitle">Celebrations</h3>
+                        <p data-i18n="celebrationsDesc">Birthdays, proposals, private events</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-3" data-aos="fade-up">
+                    <div class="specialty-card">
+                        <i class="bi bi-box2-heart"></i>
+                        <h3 data-i18n="welcomePackTitle">Welcome Pack</h3>
+                        <p data-i18n="welcomePackDesc">Champagne, fresh fruits, gourmet snacks upon arrival</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="specialty-card">
+                        <i class="bi bi-camera"></i>
+                        <h3 data-i18n="photographyTitle">Food Photography</h3>
+                        <p data-i18n="photographyDesc">Culinary photoshoot of your gastronomic experiences</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="specialty-card">
+                        <i class="bi bi-shop"></i>
+                        <h3 data-i18n="marketTourTitle">Market Tour</h3>
+                        <p data-i18n="marketTourDesc">Guided tour of the best local producers</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="specialty-card">
+                        <i class="bi bi-gift"></i>
+                        <h3 data-i18n="giftCardsTitle">Gift Cards</h3>
+                        <p data-i18n="giftCardsDesc">Offer a unique gastronomic experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container-fluid p-0">
+            <h2 class="section-title text-center mb-5" data-i18n="galleryTitle">Our Creations</h2>
+            <div class="row g-0">
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="gallery-item" data-aos="zoom-in">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070" alt="Luxury Seafood" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="gallery-item" data-aos="zoom-in">
+                        <img src="https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=2070" alt="Gourmet Dish" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="gallery-item" data-aos="zoom-in">
+                        <img src="https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?q=80&w=2070" alt="Fine Dining" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="gallery-item" data-aos="zoom-in">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=2070" alt="Gourmet Experience" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title text-center" data-i18n="testimonialsTitle">Guest Reviews</h2>
+            <div class="row">
+                <div class="col-lg-4" data-aos="fade-up">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p data-i18n="testimonial1">"Un service exceptionnel. Le chef a créé un dîner mémorable sur notre yacht avec des produits locaux extraordinaires."</p>
+                        <div class="client" data-i18n="client1">- Jean-Pierre M., Paris</div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p data-i18n="testimonial2">"The beach picnic at Colombier was absolutely magical. Every detail was perfect, from the champagne to the fresh lobster."</p>
+                        <div class="client" data-i18n="client2">- Elizabeth R., New York</div>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p data-i18n="testimonial3">"Having our villa fully stocked upon arrival and a private chef for the week made our St Barth vacation truly luxurious."</p>
+                        <div class="client" data-i18n="client3">- Michael S., London</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="special-events" class="special-events">
+        <div class="container">
+            <h2 class="section-title text-center" data-i18n="eventsTitle">Special Events & Partnerships</h2>
+            <div class="row mt-5">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="event-card">
+                        <i class="bi bi-calendar-event"></i>
+                        <h3 data-i18n="holidayTitle">Holiday Season</h3>
+                        <p data-i18n="holidayDesc">Exclusive Christmas and New Year's Eve dining experiences with special festive menus</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="event-card">
+                        <i class="bi bi-trophy"></i>
+                        <h3 data-i18n="bucketTitle">Bucket Regatta</h3>
+                        <p data-i18n="bucketDesc">Specialized catering services for crews and guests during the prestigious sailing event</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="event-card">
+                        <i class="bi bi-stars"></i>
+                        <h3 data-i18n="rumTitle">Rum Tasting</h3>
+                        <p data-i18n="rumDesc">Curated Caribbean rum tasting experiences paired with gourmet appetizers</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="partner-card">
+                        <i class="bi bi-house-check"></i>
+                        <h3 data-i18n="villaAgencyTitle">Villa Agencies</h3>
+                        <p data-i18n="villaAgencyDesc">Preferred partner of leading luxury villa rental agencies in St Barth</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="partner-card">
+                        <i class="bi bi-person-check"></i>
+                        <h3 data-i18n="conciergeTitle">Concierge Services</h3>
+                        <p data-i18n="conciergeDesc">Seamless collaboration with top-tier concierge services on the island</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="partner-card">
+                        <i class="bi bi-water"></i>
+                        <h3 data-i18n="yachtBrokerTitle">Yacht Brokers</h3>
+                        <p data-i18n="yachtBrokerDesc">Trusted culinary partner for leading yacht charter companies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dietary" class="dietary-requirements">
+        <div class="container">
+            <h2 data-i18n="dietaryTitle">Special Dietary Requirements</h2>
+            <p class="lead" data-i18n="dietaryLead">We take pride in accommodating all dietary preferences and requirements, ensuring every guest enjoys an exceptional dining experience.</p>
+            
+            <div class="dietary-grid">
+                <div class="dietary-item" data-aos="fade-up" data-aos-delay="200">
+                    <i class="bi bi-flower1"></i>
+                    <h3 data-i18n="vegetarianTitle">Vegetarian & Vegan</h3>
+                    <p data-i18n="vegetarianDesc">Creative plant-based dishes using fresh, local produce and innovative cooking techniques.</p>
+                </div>
+                
+                <div class="dietary-item" data-aos="fade-up" data-aos-delay="300">
+                    <i class="bi bi-slash-circle"></i>
+                    <h3 data-i18n="glutenFreeTitle">Gluten-Free</h3>
+                    <p data-i18n="glutenFreeDesc">Delicious gluten-free alternatives without compromising on taste or presentation.</p>
+                </div>
+                
+                <div class="dietary-item" data-aos="fade-up" data-aos-delay="400">
+                    <i class="bi bi-check-circle"></i>
+                    <h3 data-i18n="kosherTitle">Kosher</h3>
+                    <p data-i18n="kosherDesc">Respectful preparation of kosher meals following all traditional requirements.</p>
+                </div>
+                
+                <div class="dietary-item" data-aos="fade-up" data-aos-delay="500">
+                    <i class="bi bi-shield-check"></i>
+                    <h3 data-i18n="allergyTitle">Food Allergies</h3>
+                    <p data-i18n="allergyDesc">Careful attention to allergies and cross-contamination prevention in our preparation.</p>
+                </div>
+            </div>
+
+            <div class="note" data-aos="fade-up" data-aos-delay="600">
+                <i class="bi bi-info-circle"></i>
+                <p data-i18n="dietaryNote">Please inform us of any dietary requirements or allergies when making your reservation. We are happy to customize our menus to meet your specific needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="section-title" data-i18n="contactTitle">Book Your Experience</h2>
+                    <p class="lead" data-i18n="contactLead">Contact us to create your perfect dining experience in St Barth</p>
+                    <form id="contact-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name" required data-i18n="[placeholder]name">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required data-i18n="[placeholder]email">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="tel" class="form-control" placeholder="Phone/WhatsApp" data-i18n="[placeholder]phone">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Villa/Yacht Name" data-i18n="[placeholder]villaName">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-select" required>
+                                <option value="" selected disabled data-i18n="selectService">Select Service Type</option>
+                                <option value="villa" data-i18n="villaService">Villa Service</option>
+                                <option value="yacht" data-i18n="yachtService">Yacht Service</option>
+                                <option value="event" data-i18n="eventService">Special Event</option>
+                                <option value="picnic" data-i18n="picnicService">Beach Picnic</option>
+                                <option value="class" data-i18n="classService">Cooking Class</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="date" class="form-control" placeholder="Arrival Date" data-i18n="[placeholder]arrivalDate">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="number" class="form-control" placeholder="Number of Guests" data-i18n="[placeholder]guests">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Tell us about your desired experience, dietary requirements, or special requests" data-i18n="[placeholder]message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-i18n="send">Send Request</button>
+                    </form>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="contact-info">
+                        <h3 data-i18n="directContact">Direct Contact</h3>
+                        <p><i class="bi bi-whatsapp"></i> WhatsApp: +590 690 XX XX XX</p>
+                        <p><i class="bi bi-telephone"></i> Phone: +590 690 XX XX XX</p>
+                        <p><i class="bi bi-envelope"></i> Email: contact@chefsbh.com</p>
+                        <p><i class="bi bi-geo-alt"></i> St Barthélemy, French West Indies</p>
+                        
+                        <div class="mt-4">
+                            <h4 data-i18n="availableHours">Available Hours</h4>
+                            <p data-i18n="availableHoursText">Available 7/7 - 24/24</p>
+                            <p class="text-muted" data-i18n="flexibleScheduling">Flexible scheduling to accommodate your needs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>ChefSBH</h3>
+                    <p data-i18n="footerTagline">Luxury private chef services in St Barth</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next@23.10.0/dist/umd/i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@7.2.0/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html> 
