@@ -1,0 +1,21 @@
+name: chefsbh
+services:
+  - name: web
+    git:
+      branch: master
+      repo_clone_url: ${GIT_REPO_URL}
+    build_command: npm run build
+    run_command: npm start
+    envs:
+      - key: NODE_ENV
+        value: production
+    instance_size_slug: basic-xxs
+    instance_count: 1
+static_sites:
+  - name: static
+    git:
+      branch: master
+      repo_clone_url: ${GIT_REPO_URL}
+    build_command: npm run build
+    output_dir: /dist
+    catchall_document: index.html 
